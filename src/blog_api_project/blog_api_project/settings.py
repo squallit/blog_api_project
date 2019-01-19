@@ -123,4 +123,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Instruct Django to use customized User Model
 AUTH_USER_MODEL = 'blog_api_app.UserProfile'
