@@ -3,6 +3,7 @@ from . import models
 
 class HelloSerializer(serializers.Serializer):
 
+    # Create fields to post / update
     name = serializers.CharField(max_length=10)
 
 class UserProfileSerializer(serializers.ModelSerializer):

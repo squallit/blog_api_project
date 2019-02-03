@@ -4,10 +4,6 @@ from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
 
 
-
-# Create your models here.
-
-
 # Create User Manager models
 class UserProfileManager(BaseUserManager):
     # Helps Django to work with customized user models
@@ -43,7 +39,7 @@ class UserProfileManager(BaseUserManager):
 
         user.save(using=self._db)
 
-# Create User Profile Models
+# Create User Profile Models to override AbstractBaseUser
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     # Represent User Profile in Database
 

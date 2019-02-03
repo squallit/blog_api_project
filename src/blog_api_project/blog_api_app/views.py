@@ -30,6 +30,7 @@ class HelloApiView(APIView):
 
     def post(self, request):
 
+        # call serializer
         serializer = serializers.HelloSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -95,7 +96,9 @@ class HelloViewSet(viewsets.ViewSet):
 class UserProfileViewSet(viewsets.ModelViewSet):
 
     serializer_class = serializers.UserProfileSerializer
+
     queryset = models.UserProfile.objects.all()
+
     #TokenAuthentication store a authorized user's token in head of HTTP request
     authentication_classes = (TokenAuthentication,)
     #add permission class to ViewSet, using tuple
