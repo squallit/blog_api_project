@@ -7,7 +7,7 @@ Blog Post API using Django Rest Framework
  a. run "vagrant up" - start vagrant
  b. run "vagrant ssh" - connect vagrant to ubuntu-xenial server
 
-2. run blog_api virtual environment: run "workon blog_api"
+2. run blog_api virtual environment: run "workon envn"
 
 3. access vagrant folder: "cd /vagrant" (access root directory on server)
 

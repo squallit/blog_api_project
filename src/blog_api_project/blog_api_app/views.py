@@ -102,6 +102,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = models.UserProfile.objects.all()
 
     #TokenAuthentication store a authorized user's token in head of HTTP request
+    # tell DRF to use Token Authentication system
     authentication_classes = (TokenAuthentication,)
     #add permission class to ViewSet, using tuple
     permission_classes = (permissions.UpdateOwnProfile,)

@@ -13,3 +13,4 @@ class UpdateOwnProfile(permissions.BasePermission):
         # if Method is not safe such as UPDATE, DELETE
         # check if the currently authenticated user is the profile he is trying to change
         return obj.id == request.user.id
+        
